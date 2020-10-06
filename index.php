@@ -6,3 +6,4 @@ $plantilla = new ControladorPlantilla();
 $plantilla -> ctrPlantilla();
 
 //creamos index para conectar todos los archivos de diferentes carpetas//
+//hola laura//
