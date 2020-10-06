@@ -53,25 +53,29 @@
 <!-- Site wrapper -->
 <div class="wrapper">
 
+
+  <?php
+  /*== cabezal===*/
+    include "modulos/cabezote.php";
+
+    /*== menu===*/
+    include "modulos/menu.php";
+
+    /*== contenido===*/
+    include "modulos/contenido.php";
+
+    /*== footer===*/
+    include "modulos/footer.php";
+  ?>
+
   
-
-  <!-- =============================================== -->
-
-  <!-- Left side column. contains the sidebar -->
-  
-
-  <!-- =============================================== -->
-
- 
-  <!-- /.content-wrapper -->
-
   
 
 
 </div>
 <!-- ./wrapper -->
 
-<script src="js/plantilla.js"></script>
+<script src="vistas/js/plantilla.js"></script>
 
 </body>
 </html>
