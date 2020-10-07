@@ -1,44 +1,53 @@
-<!-- esta es una plantilla en blanco para luego trabajar en ella -->
+
+<!--plantilla en la cual trabajamos-->
+<?php
+
+session_start();
+
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Itata ERP</title>
+
+  <title>sistema de inventario</title>
+
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-    <!--=================================
-          PLUGIONS  DE CSS           
-    ==================================-->
+  <link rel="icon" href="vistas/img/plantilla/icono-negro.png">
+
+   <!--plugin css-->
+
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="vistas/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
   <!-- Font Awesome -->
-
   <link rel="stylesheet" href="vistas/bower_components/font-awesome/css/font-awesome.min.css">
+
   <!-- Ionicons -->
-
   <link rel="stylesheet" href="vistas/bower_components/Ionicons/css/ionicons.min.css">
-  <!-- Theme style -->
 
+  <!-- Theme style -->
   <link rel="stylesheet" href="vistas/dist/css/AdminLTE.css">
-  <!-- AdminLTE Skins.  -->
+  
+  <!-- AdminLTE Skins -->
   <link rel="stylesheet" href="vistas/dist/css/skins/_all-skins.min.css">
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-   
-  <!--=================================
-          PLUGIONS  DE JAVASCRIPT           
-    ==================================-->
+
+  <!--plugin javascript-->
 
   <!-- jQuery 3 -->
   <script src="vistas/bower_components/jquery/dist/jquery.min.js"></script>
   
   <!-- Bootstrap 3.3.7 -->
   <script src="vistas/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  
+
   <!-- FastClick -->
   <script src="vistas/bower_components/fastclick/lib/fastclick.js"></script>
   
@@ -46,36 +55,68 @@
   <script src="vistas/dist/js/adminlte.min.js"></script>
 
 </head>
- <!--=================================
-          cuerpo documento         
-    ==================================-->
-<body class="hold-transition skin-blue sidebar-collapse sidebar-mini">
-<!-- Site wrapper -->
-<div class="wrapper">
 
+<!--cuerpo doc-->
 
+<body class="hold-transition skin-blue sidebar-collapse sidebar-mini login-page">
+ 
   <?php
-  /*== cabezal===*/
+
+  if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok"){
+
+   echo '<div class="wrapper">';
+
+    /*cabezal*/
+
     include "modulos/cabezote.php";
 
-    /*== menu===*/
+    /*menu*/
+
     include "modulos/menu.php";
 
-    /*== contenido===*/
-    include "modulos/contenido.php";
+    /*contenido*/
 
-    /*== footer===*/
+    if(isset($_GET["ruta"])){
+
+      if($_GET["ruta"] == "inicio" ||
+         $_GET["ruta"] == "usuarios" ||
+         $_GET["ruta"] == "categorias" ||
+         $_GET["ruta"] == "productos" ||
+         $_GET["ruta"] == "clientes" ||
+         $_GET["ruta"] == "ventas" ||
+         $_GET["ruta"] == "crear-venta" ||
+         $_GET["ruta"] == "reportes" ||
+         $_GET["ruta"] == "salir"){
+
+        include "modulos/".$_GET["ruta"].".php";
+
+      }else{
+
+        include "modulos/404.php";
+
+      }
+
+    }else{
+
+      include "modulos/inicio.php";
+
+    }
+
+    /*footer*/
+
     include "modulos/footer.php";
+
+    echo '</div>';
+
+  }else{
+
+    include "modulos/login.php";
+
+  }
+
   ?>
 
-  
-  
-
-
-</div>
-<!-- ./wrapper -->
 
 <script src="vistas/js/plantilla.js"></script>
-
 </body>
 </html>

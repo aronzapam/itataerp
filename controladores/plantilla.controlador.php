@@ -1,5 +1,3 @@
-
-<!-- estamos creando una clase controlador  -->
 <?php
 
 class ControladorPlantilla{

@@ -1,84 +1,121 @@
 <aside class="main-sidebar">
-	<section class="sidebar">
-		 <!-- crando contenido al menu -->
+
+	 <section class="sidebar">
+
 		<ul class="sidebar-menu">
 
 			<li class="active">
-				<a href="">
+
+				<a href="inicio">
+
 					<i class="fa fa-home"></i>
 					<span>inicio</span>
+
 				</a>
+
 			</li>
 
-			<li >
-				<a href="">
+			<li>
+
+				<a href="usuarios">
+
 					<i class="fa fa-user"></i>
-					<span>gestor usuarios</span>
+					<span>usuarios</span>
+
 				</a>
+
 			</li>
 
-			<li >
-				<a href="">
+			<li>
+
+				<a href="categorias">
+
 					<i class="fa fa-th"></i>
 					<span>categorias</span>
+
 				</a>
+
 			</li>
 
-			<li >
-				<a href="">
+			<li>
+
+				<a href="productos">
+
 					<i class="fa fa-product-hunt"></i>
 					<span>productos</span>
+
 				</a>
+
 			</li>
 
-			<li >
-				<a href="">
+			<li>
+
+				<a href="clientes">
+
 					<i class="fa fa-users"></i>
 					<span>clientes</span>
+
 				</a>
+
 			</li>
 
-			<li class="treeview" >
+			<li class="treeview">
 
-				<a href="">
+				<a href="#">
 
 					<i class="fa fa-list-ul"></i>
-
+					
 					<span>ventas</span>
-
+					
 					<span class="pull-right-container">
-
+					
 						<i class="fa fa-angle-left pull-right"></i>
 
 					</span>
 
 				</a>
+
 				<ul class="treeview-menu">
-
+					
 					<li>
-						<a href="">
+
+						<a href="ventas">
+							
 							<i class="fa fa-circle-o"></i>
-								<span>administrar ventas</span>
+							<span>administrar ventas</span>
+
 						</a>
+
 					</li>
 
 					<li>
-						<a href="">
+
+						<a href="crear-venta">
+							
 							<i class="fa fa-circle-o"></i>
-								<span>crear ventas</span>
+							<span>crear venta</span>
+
 						</a>
+
 					</li>
 
 					<li>
-						<a href="">
+
+						<a href="reportes">
+							
 							<i class="fa fa-circle-o"></i>
-								<span>reporte ventas</span>
+							<span>reporte de ventas</span>
+
 						</a>
+
 					</li>
 
 				</ul>
+
 			</li>
+
 		</ul>
-	</section>
-	
+
+	 </section>
+
 </aside>
