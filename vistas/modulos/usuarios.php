@@ -36,13 +36,13 @@
 
       <div class="box-body">
         
-        <table class="table table-bordered table-striped">
+        <table class="table table-bordered table-striped tablas">
           
           <thead>
             
             <tr>
               
-              <th>#</th>
+              <th style="width:10px">#</th>
               <th>nombre</th>
               <th>usuario</th>
               <th>perfil</th>
@@ -149,7 +149,7 @@
 
                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
 
-              <input text="text" class="from-control input-lg" name ="nuevaContraseña" placeholder="Ingresar Contraseña " required>
+              <input text="text" class="from-control input-lg" name ="nuevoPassword" placeholder="Ingresar Contraseña " required>
 
               </div>
 
@@ -170,8 +170,6 @@
                   <option value="Administrador">Administrador</option>
 
                   <option value="Especial">Especial </option>
-
-                  <option value="Producto">Producto </option>
 
                   <option value="Vendedor">Vendedor </option>
 
@@ -208,6 +206,13 @@
           <button type="submit" class="btn btn-primary">Guardar usuario</button>
 
         </div>
+
+        <?php
+
+        $crearUsuario = new ControladorUsuarios();
+        $crearUsuario -> ctrCrearUsuario();
+
+        ?>
 
       </form>
 
