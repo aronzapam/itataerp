@@ -12,7 +12,7 @@
 
     <ol class="breadcrumb">
       
-      <li><a href="#"><i class="fa fa-dashboard"></i> inicio</a></li>
+      <li><a href="inicio"><i class="fa fa-dashboard"></i> inicio</a></li>
       
       <li class="active">tablero</li>
     

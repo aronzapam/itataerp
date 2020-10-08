@@ -16,7 +16,7 @@
 	<!--barra navegacion-->
 	<nav class="navbar navbar-static-top" role="navigation">
 		
-		<!-- boton de navegación -->
+		<!-- boton de navegacion -->
 
 	 	<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         	
@@ -40,7 +40,7 @@
 
 					</a>
 
-					<!-- Dropdown-toggle -->
+					<!-- dropdown-toggle -->
 
 					<ul class="dropdown-menu">
 						
