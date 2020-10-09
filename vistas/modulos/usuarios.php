@@ -36,7 +36,7 @@
 
       <div class="box-body">
         
-        <table class="table table-bordered table-striped tablas">
+        <table class="table table-bordered table-striped ">
           
           <thead>
             
@@ -61,7 +61,7 @@
               <td>1</td>
               <td>usuario administrador</td>
               <td>admin</td>
-              <td><img src="vistas/img/usuarios/default/icono default.png" class="img-thumbnail" width="40px"></td>
+              <td><img src="vistas/img/usuarios/default/iconodefault.png" class="img-thumbnail" width="40px"></td>
               <td>administrador</td>
               <td><button class="btn btn-success btn-xs"> activado</button></td>
               <td>9/10/2020</td>
@@ -185,11 +185,11 @@
 
             <div class="panel"> Subir foto</div>
 
-            <input type="file" id ="nuevaFoto" name="nuevaFoto">
+            <input type="file" class="nuevaFoto" name="nuevaFoto">
 
-            <p class="helper-block">peso máximo de la foto 200 MB </p>
+            <p class="helper-block">foto </p>
 
-            <img src="vistas/img/usuarios/default/iconodefault.png" class="img-thumbnail" width="100px">
+            <img src="vistas/img/usuarios/default/iconodefault.png" class="img-thumbnail previsualizar" width="100px">
 
             </div>
 

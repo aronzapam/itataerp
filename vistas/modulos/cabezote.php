@@ -34,7 +34,7 @@
 					
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						
-						<img src="vistas/img/usuarios/default/icono default.png" class="user-image">
+						<img src="vistas/img/usuarios/default/iconodefault.png" class="user-image">
 
 						<span class="hidden-xs">usuario admin</span>
 
