@@ -86,7 +86,7 @@
                     <td>
                       <div class="btn-group">
                         
-                        <button class="btn btn-warning" data-toggle="modal" data-target="#modalEditarUsuario"><i class="fa fa-pencil"></i></button>
+                        <button class="btn btn-warning btnEditarUsuario" idUsuario="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarUsuario"><i class="fa fa-pencil"></i></button>
                         <button class="btn btn-danger"><i class="fa fa-times"></i></button>
 
                       </div>
@@ -277,7 +277,7 @@
 
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
 
-              <input text="text" class="from-control input-lg" name ="editarNombre" value="" required>
+              <input text="text" class="from-control input-lg" id="editarNombre" name="editarNombre" value="" required>
 
               </div>
 
@@ -290,7 +290,7 @@
 
                 <span class="input-group-addon"><i class="fa fa-key"></i></span>
 
-              <input text="text" class="from-control input-lg" name ="editarUsuario" value="" required>
+              <input text="text" class="from-control input-lg" id="editarUsuario" name="editarUsuario" value="" required>
 
               </div>
 
