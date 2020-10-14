@@ -46,7 +46,7 @@
            <th>foto</th>
            <th>perfil</th>
            <th>estado</th>
-           <th>iltimo login</th>
+           <th>ultimo login</th>
            <th>acciones</th>
 
          </tr> 

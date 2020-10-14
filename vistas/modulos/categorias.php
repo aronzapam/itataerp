@@ -5,6 +5,7 @@
     <h1>
       
       administrar categorias
+    
     </h1>
 
     <ol class="breadcrumb">
@@ -17,29 +18,27 @@
 
   </section>
 
-
   <section class="content">
 
-    
     <div class="box">
 
       <div class="box-header with-border">
-
-        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarCategoria">
+  
+        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarUsuario">
           
-          agregar categoria
+          agregar usuario
 
         </button>
-      
+
       </div>
 
       <div class="box-body">
         
-        <table class="table table-bordered table-striped ">
-          
-          <thead>
-            
-            <tr>
+       <table class="table table-bordered table-striped dt-responsive tablas" width="100%">
+         
+        <thead>
+         
+         <tr>
               
               <th style="width:10px">#</th>
               <th>categoria</th>
@@ -53,7 +52,7 @@
             <tr>
               
                     <td>1</td>
-                    <td>EQUIPOS ELECTROMECANICOS</td>
+                    <td>EQUIPOS </td>
                     <td>admin</td>
                     <td><img src="vistas/img/usuarios/default/iconodefault.png" class="img-thumbnail" width="40px"></td>
                     <td> Administrador</td>
