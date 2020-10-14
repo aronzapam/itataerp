@@ -1,5 +1,3 @@
-
-<!--plantilla en la cual trabajamos-->
 <?php
 
 session_start();
@@ -13,12 +11,10 @@ session_start();
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>sistema de inventario</title>
+  <title>sistema de inventario erp</title>
 
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-
-  <link rel="icon" href="#">
 
    <!--plugin css-->
 
@@ -40,10 +36,11 @@ session_start();
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
-    <!-- DataTables -->
- 
+   <!-- DataTables -->
+  <link rel="stylesheet" href="vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="vistas/bower_components/datatables.net-bs/css/responsive.bootstrap.min.css">
 
-  <!--plugin javascript-->
+  <!--plugins de javascript-->
 
   <!-- jQuery 3 -->
   <script src="vistas/bower_components/jquery/dist/jquery.min.js"></script>
@@ -58,11 +55,18 @@ session_start();
   <script src="vistas/dist/js/adminlte.min.js"></script>
 
   <!-- DataTables -->
-  
+  <script src="vistas/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="vistas/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+  <script src="vistas/bower_components/datatables.net-bs/js/dataTables.responsive.min.js"></script>
+  <script src="vistas/bower_components/datatables.net-bs/js/responsive.bootstrap.min.js"></script>
+
+  <!-- SweetAlert 2 -->
+  <script src="vistas/plugins/sweetalert2/sweetalert2.all.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
 
 </head>
 
-<!--cuerpo doc-->
+<!--cuerpo documento-->
 
 <body class="hold-transition skin-blue sidebar-collapse sidebar-mini login-page">
  
@@ -122,8 +126,8 @@ session_start();
 
   ?>
 
-
 <script src="vistas/js/plantilla.js"></script>
 <script src="vistas/js/usuarios.js"></script>
+
 </body>
 </html>

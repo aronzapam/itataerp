@@ -18,181 +18,197 @@
 
   </section>
 
-
   <section class="content">
 
-    
     <div class="box">
 
       <div class="box-header with-border">
-
+  
         <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarUsuario">
           
           agregar usuario
 
         </button>
-      
+
       </div>
 
       <div class="box-body">
         
-        <table class="table table-bordered table-striped ">
-          
-          <thead>
-            
-            <tr>
-              
-              <th style="width:10px">#</th>
-              <th>nombre</th>
-              <th>usuario</th>
-              <th>perfil</th>
-              <th>estado</th>
-              <th>ultimo login</th>
-              <th>acciones</th>
+       <table class="table table-bordered table-striped dt-responsive tablas" width="100%">
+         
+        <thead>
+         
+         <tr>
+           
+           <th style="width:10px">#</th>
+           <th>nombre</th>
+           <th>usuario</th>
+           <th>foto</th>
+           <th>perfil</th>
+           <th>estado</th>
+           <th>iltimo login</th>
+           <th>acciones</th>
 
-            </tr>
+         </tr> 
 
-          </thead>
+        </thead>
 
-          <tbody>
+        <tbody>
 
-            <?php
+        <?php
 
-            $item = null;
-            $valor = null;
+        $item = null;
+        $valor = null;
 
-            $usuarios = ControladorUsuarios::ctrMostrarUsuarios($item, $valor);
+        $usuarios = ControladorUsuarios::ctrMostrarUsuarios($item, $valor);
 
-            foreach ($usuarios as $key => $value){
-              echo '<tr>
-              
-                    <td>1</td>
-                    <td>'.$value["nombre"].'</td>
-                    <td>'.$value["usuario"].'</td>';
+       foreach ($usuarios as $key => $value){
+         
+          echo ' <tr>
+                  <td>1</td>
+                  <td>'.$value["nombre"].'</td>
+                  <td>'.$value["usuario"].'</td>';
 
-                    if($value["foto"] != ""){
+                  if($value["foto"] != ""){
 
-                      echo'<td><img src="'.$value["foto"].'" class="img-thumbnail" width="40px"></td>';
-                    }else{
+                    echo '<td><img src="'.$value["foto"].'" class="img-thumbnail" width="40px"></td>';
 
-                      echo '<td><img src="vistas/img/usuarios/default/iconodefault.png" class="img-thumbnail" width="40px"></td>';
-                    }
+                  }else{
 
-                    
+                    echo '<td><img src="vistas/img/usuarios/default/icondefault.png" class="img-thumbnail" width="40px"></td>';
 
-                    echo '<td>'.$value["perfil"].'</td>
-                    <td><button class="btn btn-success btn-xs"> activado</button></td>
-                    <td>'.$value["ultimo_login"].'</td>
-                    <td>
-                      <div class="btn-group">
+                  }
+
+                  echo '<td>'.$value["perfil"].'</td>';
+
+                  if($value["estado"] != 0){
+
+                    echo '<td><button class="btn btn-success btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="0">Activado</button></td>';
+
+                  }else{
+
+                    echo '<td><button class="btn btn-danger btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="1">Desactivado</button></td>';
+
+                  }             
+
+                  echo '<td>'.$value["ultimo_login"].'</td>
+                  <td>
+
+                    <div class="btn-group">
                         
-                        <button class="btn btn-warning btnEditarUsuario" idUsuario="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarUsuario"><i class="fa fa-pencil"></i></button>
-                        <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                      <button class="btn btn-warning btnEditarUsuario" idUsuario="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarUsuario"><i class="fa fa-pencil"></i></button>
 
-                      </div>
-                    </td>
+                      <button class="btn btn-danger btnEliminarUsuario" idUsuario="'.$value["id"].'" fotoUsuario="'.$value["foto"].'" usuario="'.$value["usuario"].'"><i class="fa fa-times"></i></button>
 
-                  </tr>';
-            }
+                    </div>  
 
-            ?>
+                  </td>
 
-          </tbody>
+                </tr>';
+        }
 
-        </table>
+
+        ?> 
+
+        </tbody>
+
+       </table>
 
       </div>
-      
+
     </div>
-    
+
   </section>
-  
+
 </div>
 
-<!--MODAL AGREGAR USUARIO-->
+<!--
+modal agregar el usuario
+-->
 
 <div id="modalAgregarUsuario" class="modal fade" role="dialog">
-
+  
   <div class="modal-dialog">
 
     <div class="modal-content">
 
-        <form role="form" method="post" enctype="multipart/form-data">
+      <form role="form" method="post" enctype="multipart/form-data">
 
-        <!--CABEZA DEL MODAL-->
+        <!--cabeza del modal-->
 
         <div class="modal-header" style="background:#3c8dbc; color:white">
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-          <h4 class="modal-title">Agregar Usuario</h4>
+          <h4 class="modal-title">agregar usuario</h4>
 
         </div>
 
-         <!--CUERPO DEL MODAL-->
+        <!--cuerpo modal-->
 
         <div class="modal-body">
 
           <div class="box-body">
 
-            <!-- Entrada para el nombre -->
-
+            <!-- entrada nombre-->
+            
             <div class="form-group">
-
+              
               <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-user"></i></span> 
 
-                <span class="input-group-addon"><i class="fa fa-user"></i></span>
-
-              <input text="text" class="from-control input-lg" name ="nuevoNombre" placeholder="Ingresar nombre" required>
-
-              </div>
-
-            </div>
-            <!-- Entrada para el USUARIO -->
-
-            <div class="form-group">
-
-              <div class="input-group">
-
-                <span class="input-group-addon"><i class="fa fa-key"></i></span>
-
-              <input text="text" class="from-control input-lg" name ="nuevoUsuario" placeholder="Ingresar usuario" required>
+                <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Ingresar nombre" required>
 
               </div>
 
             </div>
 
-            <!-- Entrada para el CONTRASEÑA -->
+            <!-- entrada usuario -->
 
              <div class="form-group">
-
+              
               <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-key"></i></span> 
 
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-
-              <input text="text" class="from-control input-lg" name ="nuevoPassword" placeholder="Ingresar Contraseña " required>
+                <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Ingresar usuario" id="nuevoUsuario" required>
 
               </div>
 
             </div>
 
-            <!-- Entrada para seleccionar su Perfil -->
+            <!-- entrada contraseña -->
+
+             <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span> 
+
+                <input type="password" class="form-control input-lg" name="nuevoPassword" placeholder="Ingresar contraseña" required>
+
+              </div>
+
+            </div>
+
+            <!-- entrada selecionar perfil -->
 
             <div class="form-group">
-
+              
               <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-users"></i></span> 
 
-                <span class="input-group-addon"><i class="fa fa-users"></i></span>
+                <select class="form-control input-lg" name="nuevoPerfil">
+                  
+                  <option value="">selecionar perfil</option>
 
-                <select  class ="form-control input-lg" name ="nuevoPerfil">
+                  <option value="Administrador">administrador</option>
 
-                  <option value="">Seleccione perfil </option>
+                  <option value="Especial">especial</option>
 
-                  <option value="Administrador">Administrador</option>
-
-                  <option value="Especial">Especial </option>
-
-                  <option value="Vendedor">Vendedor </option>
+                  <option value="Vendedor">vendedor</option>
 
                 </select>
 
@@ -200,17 +216,17 @@
 
             </div>
 
-            <!-- Entrada para subir foto  -->
+            <!-- entrada subir foto -->
 
-            <div class="form-group">
+             <div class="form-group">
+              
+              <div class="panel">subir foto</div>
 
-            <div class="panel"> Subir foto</div>
+              <input type="file" class="nuevaFoto" name="nuevaFoto">
 
-            <input type="file" class="nuevaFoto" name="nuevaFoto">
+              <p class="help-block">peso maximo de la foto 2mb</p>
 
-            <p class="helper-block">foto </p>
-
-            <img src="vistas/img/usuarios/default/iconodefault.png" class="img-thumbnail previsualizar" width="100px">
+              <img src="vistas/img/usuarios/default/iconodefault.png" class="img-thumbnail previsualizar" width="100px">
 
             </div>
 
@@ -218,20 +234,20 @@
 
         </div>
 
-         <!--PIE DEL MODAL-->
+        <!--pie modal-->
 
         <div class="modal-footer">
 
-          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">salir</button>
 
-          <button type="submit" class="btn btn-primary">Guardar usuario</button>
+          <button type="submit" class="btn btn-primary">guardar usuario</button>
 
         </div>
 
         <?php
 
-        $crearUsuario = new ControladorUsuarios();
-        $crearUsuario -> ctrCrearUsuario();
+          $crearUsuario = new ControladorUsuarios();
+          $crearUsuario -> ctrCrearUsuario();
 
         ?>
 
@@ -243,90 +259,93 @@
 
 </div>
 
-<!--MODAL EDITAR USUARIO-->
+<!--modal editar suaro-->
 
 <div id="modalEditarUsuario" class="modal fade" role="dialog">
-
+  
   <div class="modal-dialog">
 
     <div class="modal-content">
 
-        <form role="form" method="post" enctype="multipart/form-data">
+      <form role="form" method="post" enctype="multipart/form-data">
 
-        <!--CABEZA DEL MODAL-->
+        <!--cabeza modal-->
 
         <div class="modal-header" style="background:#3c8dbc; color:white">
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-          <h4 class="modal-title">editar Usuario</h4>
+          <h4 class="modal-title">editar usuario</h4>
 
         </div>
 
-         <!--CUERPO DEL MODAL-->
+        <!--cuerpo modal-->
 
         <div class="modal-body">
 
           <div class="box-body">
 
-            <!-- Entrada para el nombre -->
-
+            <!-- entrada nombre -->
+            
             <div class="form-group">
-
+              
               <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-user"></i></span> 
 
-                <span class="input-group-addon"><i class="fa fa-user"></i></span>
-
-              <input text="text" class="from-control input-lg" id="editarNombre" name="editarNombre" value="" required>
-
-              </div>
-
-            </div>
-            <!-- Entrada para el USUARIO -->
-
-            <div class="form-group">
-
-              <div class="input-group">
-
-                <span class="input-group-addon"><i class="fa fa-key"></i></span>
-
-              <input text="text" class="from-control input-lg" id="editarUsuario" name="editarUsuario" value="" required>
+                <input type="text" class="form-control input-lg" id="editarNombre" name="editarNombre" value="" required>
 
               </div>
 
             </div>
 
-            <!-- Entrada para el CONTRASEÑA -->
+            <!-- entrada usuario -->
 
              <div class="form-group">
-
+              
               <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-key"></i></span> 
 
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-
-              <input text="text" class="from-control input-lg" name ="editarPassword" placeholder="Nueva Contraseña " required>
+                <input type="text" class="form-control input-lg" id="editarUsuario" name="editarUsuario" value="" readonly>
 
               </div>
 
             </div>
 
-            <!-- Entrada para seleccionar su Perfil -->
+            <!-- entrada contraseña -->
+
+             <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span> 
+
+                <input type="password" class="form-control input-lg" name="editarPassword" placeholder="Escriba la nueva contraseña">
+
+                <input type="hidden" id="passwordActual" name="passwordActual">
+
+              </div>
+
+            </div>
+
+            <!-- entrada selccionar perfil -->
 
             <div class="form-group">
-
+              
               <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-users"></i></span> 
 
-                <span class="input-group-addon"><i class="fa fa-users"></i></span>
-
-                <select  class ="form-control input-lg" name ="editarPerfil">
-
+                <select class="form-control input-lg" name="editarPerfil">
+                  
                   <option value="" id="editarPerfil"></option>
 
-                  <option value="Administrador">Administrador</option>
+                  <option value="Administrador">administrador</option>
 
-                  <option value="Especial">Especial </option>
+                  <option value="Especial">especial</option>
 
-                  <option value="Vendedor">Vendedor </option>
+                  <option value="Vendedor">vendedor</option>
 
                 </select>
 
@@ -334,17 +353,19 @@
 
             </div>
 
-            <!-- Entrada para subir foto  -->
+            <!-- entrada subir foto -->
 
-            <div class="form-group">
+             <div class="form-group">
+              
+              <div class="panel">subir foto</div>
 
-            <div class="panel"> Subir foto</div>
+              <input type="file" class="nuevaFoto" name="editarFoto">
 
-            <input type="file" class="nuevaFoto" name="editarFoto">
+              <p class="help-block">peso maximo de la foto 2mb</p>
 
-            <p class="helper-block">foto </p>
+              <img src="vistas/img/usuarios/default/iconodefault.png" class="img-thumbnail previsualizar" width="100px">
 
-            <img src="vistas/img/usuarios/default/iconodefault.png" class="img-thumbnail previsualizar" width="100px">
+              <input type="hidden" name="fotoActual" id="fotoActual">
 
             </div>
 
@@ -352,22 +373,22 @@
 
         </div>
 
-         <!--PIE DEL MODAL-->
+        <!--pie modal-->
 
         <div class="modal-footer">
 
-          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">salir</button>
 
           <button type="submit" class="btn btn-primary">modificar usuario</button>
 
         </div>
 
-        <!--<?php
+     <?php
 
-        $crearUsuario = new ControladorUsuarios();
-        $crearUsuario -> ctrCrearUsuario();
+          $editarUsuario = new ControladorUsuarios();
+          $editarUsuario -> ctrEditarUsuario();
 
-        ?> -->
+        ?> 
 
       </form>
 
@@ -376,3 +397,12 @@
   </div>
 
 </div>
+
+<?php
+
+  $borrarUsuario = new ControladorUsuarios();
+  $borrarUsuario -> ctrBorrarUsuario();
+
+?> 
+
+

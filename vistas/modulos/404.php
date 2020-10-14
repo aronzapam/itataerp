@@ -4,7 +4,7 @@
     
     <h1>
       
-     no se encuentra la pagina
+      pagina no  se encontrada
     
     </h1>
 
@@ -19,21 +19,25 @@
   </section>
 
   <section class="content">
-    <div class="error-page">   
+
+    <div class="error-page">
+      
       <h2 class="headline text-primary">404</h2> 
+
       <div class="error-content">
-       
+
         <h3>
 
           <i class="fa fa-warning text-primary"></i> 
 
-          ops¡ pagina no encontrada.
+          que mal pagina no encontrada.
 
         </h3>
 
         <p>
         
-           ingresa al menu lateral para ir a las paginas o ingresa a <a href="inicio">click aquí.</a>
+           puedes regresar asiendo <a href="inicio">click aquí.</a>
+        
         </p>
 
       </div>

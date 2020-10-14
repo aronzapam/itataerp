@@ -6,7 +6,7 @@
       
       tablero
       
-      <small>panel control</small>
+      <small>panel de control</small>
     
     </h1>
 
