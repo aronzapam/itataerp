@@ -10,7 +10,7 @@
 
     <ol class="breadcrumb">
       
-      <li><a href="inicio"><i class="fa fa-dashboard"></i> inicio</a></li>
+      <li><a href="#"><i class="fa fa-dashboard"></i> inicio</a></li>
       
       <li class="active">administrar categorias</li>
     
@@ -18,11 +18,18 @@
 
   </section>
 
+<<<<<<< HEAD
   <section class="content">
 
-    <div class="box">
+=======
+  <!-- Main content -->
+  <section class="content">
 
+    <!-- Default box -->
+>>>>>>> parent of 36ddda8... Merge branch 'main' of https://github.com/aronzapam/itataerp into main
+    <div class="box">
       <div class="box-header with-border">
+<<<<<<< HEAD
   
         <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarUsuario">
           
@@ -30,9 +37,20 @@
 
         </button>
 
-      </div>
+=======
+        <h3 class="box-title">Title</h3>
 
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                  title="Collapse">
+            <i class="fa fa-minus"></i></button>
+          <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+            <i class="fa fa-times"></i></button>
+        </div>
+>>>>>>> parent of 36ddda8... Merge branch 'main' of https://github.com/aronzapam/itataerp into main
+      </div>
       <div class="box-body">
+<<<<<<< HEAD
         
        <table class="table table-bordered table-striped dt-responsive tablas" width="100%">
          
@@ -121,213 +139,19 @@
 
         </table>
 
+=======
+        Start creating your amazing application!
+>>>>>>> parent of 36ddda8... Merge branch 'main' of https://github.com/aronzapam/itataerp into main
       </div>
-      
+      <!-- /.box-body -->
+      <div class="box-footer">
+        Footer
+      </div>
+      <!-- /.box-footer-->
     </div>
-    
+    <!-- /.box -->
+
   </section>
-  
+  <!-- /.content -->
 </div>
-
-<!--MODAL AGREGAR USUARIO-->
-
-<div id="modalAgregarCategoria" class="modal fade" role="dialog">
-
-  <div class="modal-dialog">
-
-    <div class="modal-content">
-
-        <form role="form" method="post" >
-
-        <!--CABEZA DEL MODAL-->
-
-        <div class="modal-header" style="background:#3c8dbc; color:white">
-
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-          <h4 class="modal-title">Agregar Categoria</h4>
-
-        </div>
-
-         <!--CUERPO DEL MODAL-->
-
-        <div class="modal-body">
-
-          <div class="box-body">
-
-            <!-- Entrada para el nombre -->
-
-            <div class="form-group">
-
-              <div class="input-group">
-
-                <span class="input-group-addon"><i class="fa fa-th"></i></span>
-
-              <input text="text" class="from-control input-lg" name ="nuevaCategoria" placeholder="Ingresar categoria" required>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-         <!--PIE DEL MODAL-->
-
-        <div class="modal-footer">
-
-          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
-
-          <button type="submit" class="btn btn-primary">Guardar Categoria</button>
-
-        </div>
-
-        <?php
-
-        $crearUsuario = new ControladorUsuarios();
-        $crearUsuario -> ctrCrearUsuario();
-
-        ?>
-
-      </form>
-
-    </div>
-
-  </div>
-
-</div>
-
-<!--MODAL EDITAR USUARIO-->
-
-<div id="modalEditarUsuario" class="modal fade" role="dialog">
-
-  <div class="modal-dialog">
-
-    <div class="modal-content">
-
-        <form role="form" method="post" enctype="multipart/form-data">
-
-        <!--CABEZA DEL MODAL-->
-
-        <div class="modal-header" style="background:#3c8dbc; color:white">
-
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-          <h4 class="modal-title">editar Usuario</h4>
-
-        </div>
-
-         <!--CUERPO DEL MODAL-->
-
-        <div class="modal-body">
-
-          <div class="box-body">
-
-            <!-- Entrada para el nombre -->
-
-            <div class="form-group">
-
-              <div class="input-group">
-
-                <span class="input-group-addon"><i class="fa fa-user"></i></span>
-
-              <input text="text" class="from-control input-lg" id="editarNombre" name="editarNombre" value="" required>
-
-              </div>
-
-            </div>
-            <!-- Entrada para el USUARIO -->
-
-            <div class="form-group">
-
-              <div class="input-group">
-
-                <span class="input-group-addon"><i class="fa fa-key"></i></span>
-
-              <input text="text" class="from-control input-lg" id="editarUsuario" name="editarUsuario" value="" required>
-
-              </div>
-
-            </div>
-
-            <!-- Entrada para el CONTRASEÑA -->
-
-             <div class="form-group">
-
-              <div class="input-group">
-
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-
-              <input text="text" class="from-control input-lg" name ="editarPassword" placeholder="Nueva Contraseña " required>
-
-              </div>
-
-            </div>
-
-            <!-- Entrada para seleccionar su Perfil -->
-
-            <div class="form-group">
-
-              <div class="input-group">
-
-                <span class="input-group-addon"><i class="fa fa-users"></i></span>
-
-                <select  class ="form-control input-lg" name ="editarPerfil">
-
-                  <option value="" id="editarPerfil"></option>
-
-                  <option value="Administrador">Administrador</option>
-
-                  <option value="Especial">Especial </option>
-
-                  <option value="Vendedor">Vendedor </option>
-
-                </select>
-
-              </div>
-
-            </div>
-
-            <!-- Entrada para subir foto  -->
-
-            <div class="form-group">
-
-            <div class="panel"> Subir foto</div>
-
-            <input type="file" class="nuevaFoto" name="editarFoto">
-
-            <p class="helper-block">foto </p>
-
-            <img src="vistas/img/usuarios/default/iconodefault.png" class="img-thumbnail previsualizar" width="100px">
-
-            </div>
-
-          </div>
-
-        </div>
-
-         <!--PIE DEL MODAL-->
-
-        <div class="modal-footer">
-
-          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
-
-          <button type="submit" class="btn btn-primary">modificar usuario</button>
-
-        </div>
-
-        <!--<?php
-
-        $crearUsuario = new ControladorUsuarios();
-        $crearUsuario -> ctrCrearUsuario();
-
-        ?> -->
-
-      </form>
-
-    </div>
-
-  </div>
-
-</div>
+<!-- /.content-wrapper -->
