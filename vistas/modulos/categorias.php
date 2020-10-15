@@ -153,7 +153,7 @@ MODAL AGREGAR categoria
               
                 <span class="input-group-addon"><i class="fa fa-th"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevoCategoria" placeholder="Ingresar categoria" required>
+                <input type="text" class="form-control input-lg" name="nuevaCategoria" placeholder="Ingresar categoria" required>
 
               </div>
 
@@ -174,6 +174,13 @@ MODAL AGREGAR categoria
           <button type="submit" class="btn btn-primary">Guardar categoria</button>
 
         </div>
+
+        <?php
+
+          $crearCategoria = new ControladorCategorias();
+          $crearCategoria -> ctrCrearCategoria();
+
+        ?>
 
       </form>
 
