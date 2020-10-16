@@ -137,5 +137,46 @@ class ControladorCategorias{
 
 	}
 
+	/*borrar categoria*/
 
+	static public function ctrBorrarCategoria(){
+
+		if(isset($_GET["idCategoria"])){
+
+
+			$tabla = "categorias";
+
+			$datos = $_GET["idCategoria"];
+
+			$respuesta = ModeloCategorias::mdlBorrarCategoria($tabla, $datos);
+
+			if($respuesta == "ok"){
+
+					echo'<script>
+
+						swal({
+						  	type: "success",
+						  	title: "la categoria ha sido borrada correctamente",
+						  	showConfirmButton: true,
+						  	confirmButtonText: "cerrar"
+						  	}).then(function(result){
+									if (result.value) {
+
+									window.location = "categorias";
+
+									}
+								})
+
+					</script>';
+
+				}
+
+
+
+
+		}
+
+
+
+	}
 }
