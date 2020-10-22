@@ -41,8 +41,8 @@
          <tr>
            
            <th style="width:10px">#</th>
-           <th>Categoria</th>
-           <th>Acciones</th>
+           <th>categoria</th>
+           <th>acciones</th>
 
          </tr> 
 
@@ -134,7 +134,7 @@ MODAL AGREGAR categoria
               
                 <span class="input-group-addon"><i class="fa fa-th"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevaCategoria" placeholder="Ingresar categoría" required>
+                <input type="text" class="form-control input-lg" name="nuevaCategoria" placeholder="Ingresar categoria" required>
 
               </div>
 
@@ -150,9 +150,9 @@ MODAL AGREGAR categoria
 
         <div class="modal-footer">
 
-          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">salir</button>
 
-          <button type="submit" class="btn btn-primary">Guardar categoría</button>
+          <button type="submit" class="btn btn-primary">guardar categoria</button>
 
         </div>
 
@@ -229,7 +229,7 @@ MODAL EDITAR categoria
 
         <div class="modal-footer">
 
-          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">salir</button>
 
           <button type="submit" class="btn btn-primary">guardar cambios</button>
 

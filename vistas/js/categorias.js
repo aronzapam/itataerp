@@ -36,14 +36,14 @@ $(".btnEliminarCategoria").click(function(){
 
     swal({
 
-      title: '¿Está seguro de borrar la categoria?',
-      text: "¡Si no lo está puede cancelar la accion!",
+      title: '¿esta seguro de borrar la categoria?',
+      text: "¡si no lo esta puede cancelar la accion!",
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      cancelButtonText: 'Cancelar',
-      confirmButtonText: 'Si, borrar categoria!'
+      cancelButtonText: 'cancelar',
+      confirmButtonText: 'si, borrar categoria!'
     }).then((result)=>{
 
       if(result.value){
