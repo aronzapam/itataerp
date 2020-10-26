@@ -10,7 +10,7 @@
 
   <div class="login-box-body">
 
-    <p class="login-box-msg">ingreso al sistema</p>
+    <p class="login-box-msg">Ingreso Al Sistema ERP</p>
 
     <form method="post">
 

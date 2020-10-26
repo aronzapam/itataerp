@@ -1,0 +1,13 @@
+usuarios
+
+administrador:
+nombre: admin 
+contraseña: admin123
+
+especial:
+nombre:carlos
+contraseña:carlos123
+
+vendedor:
+nombre:laura
+contraseña:laura123

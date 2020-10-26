@@ -4,12 +4,16 @@
 
 		<ul class="sidebar-menu">
 
-			<li class="active">
+		<?php
+
+		if($_SESSION["perfil"] == "Administrador"){
+
+			echo '<li class="active">
 
 				<a href="inicio">
 
 					<i class="fa fa-home"></i>
-					<span>inicio</span>
+					<span>Inicio</span>
 
 				</a>
 
@@ -20,18 +24,22 @@
 				<a href="usuarios">
 
 					<i class="fa fa-user"></i>
-					<span>usuarios</span>
+					<span>Usuarios</span>
 
 				</a>
 
-			</li>
+			</li>';
 
-			<li>
+		}
+
+		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Especial"){
+
+			echo '<li>
 
 				<a href="categorias">
 
 					<i class="fa fa-th"></i>
-					<span>categorias</span>
+					<span>Categorias</span>
 
 				</a>
 
@@ -42,30 +50,38 @@
 				<a href="productos">
 
 					<i class="fa fa-product-hunt"></i>
-					<span>productos</span>
+					<span>Productos</span>
 
 				</a>
 
-			</li>
+			</li>';
 
-			<li>
+		}
+
+		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Vendedor"){
+
+			echo '<li>
 
 				<a href="clientes">
 
 					<i class="fa fa-users"></i>
-					<span>clientes</span>
+					<span>Clientes</span>
 
 				</a>
 
-			</li>
+			</li>';
 
-			<li class="treeview">
+		}
+
+		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Vendedor"){
+
+			echo '<li class="treeview">
 
 				<a href="#">
 
 					<i class="fa fa-list-ul"></i>
 					
-					<span>ventas</span>
+					<span>Ventas</span>
 					
 					<span class="pull-right-container">
 					
@@ -82,7 +98,7 @@
 						<a href="ventas">
 							
 							<i class="fa fa-circle-o"></i>
-							<span>administrar ventas</span>
+							<span>Administrar ventas</span>
 
 						</a>
 
@@ -93,26 +109,23 @@
 						<a href="crear-venta">
 							
 							<i class="fa fa-circle-o"></i>
-							<span>crear venta</span>
+							<span>Crear venta</span>
 
 						</a>
 
-					</li>
+					</li>';
 
-					<li>
+					
 
-						<a href="reportes">
-							
-							<i class="fa fa-circle-o"></i>
-							<span>reporte de ventas</span>
+				
 
-						</a>
+				echo '</ul>
 
-					</li>
+			</li>';
 
-				</ul>
+		}
 
-			</li>
+		?>
 
 		</ul>
 

@@ -407,7 +407,7 @@ $(".formularioVenta").on("change", "input.nuevaCantidadProducto", function(){
 
 		swal({
 	      title: "la cantidad supera el stock",
-	      text: "¡Sólo hay "+$(this).attr("stock")+" unidades!",
+	      text: "¡Solo hay "+$(this).attr("stock")+" unidades!",
 	      type: "error",
 	      confirmButtonText: "¡cerrar!"
 	    });
@@ -706,5 +706,17 @@ $(".tablas").on("click", ".btnEliminarVenta", function(){
         }
 
   })
+
+})
+
+/*=============================================
+IMPRIMIR FACTURA
+=============================================*/
+
+$(".tablas").on("click", ".btnImprimirFactura", function(){
+
+	var codigoVenta = $(this).attr("codigoVenta");
+
+	window.open("extensiones/tcpdf/pdf/factura.php?codigo="+codigoVenta, "_blank");
 
 })

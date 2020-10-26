@@ -79,7 +79,7 @@
                 </div> 
 
                 <!--=====================================
-                ENTRADA DEL CÓDIGO
+                ENTRADA DEL CODIGO
                 ======================================--> 
 
                 <div class="form-group">
@@ -193,7 +193,7 @@
                 <input type="hidden" id="listaProductos" name="listaProductos">
 
                 <!--=====================================
-                BOTÓN PARA AGREGAR PRODUCTO
+                BOTON PARA AGREGAR PRODUCTO
                 ======================================-->
 
                 <button type="button" class="btn btn-default hidden-lg btnAgregarProducto">Agregar producto</button>
@@ -267,7 +267,7 @@
                 <hr>
 
                 <!--=====================================
-                ENTRADA MÉTODO DE PAGO
+                ENTRADA METODO DE PAGO
                 ======================================-->
 
                 <div class="form-group row">
@@ -277,10 +277,10 @@
                      <div class="input-group">
                   
                       <select class="form-control" id="nuevoMetodoPago" name="nuevoMetodoPago" required>
-                        <option value="">Seleccione método de pago</option>
+                        <option value="">Seleccione metodo de pago</option>
                         <option value="Efectivo">Efectivo</option>
-                        <option value="TC">Tarjeta Crédito</option>
-                        <option value="TD">Tarjeta Débito</option>                  
+                        <option value="TC">Tarjeta Credito</option>
+                        <option value="TD">Tarjeta Debito</option>                  
                       </select>    
 
                     </div>
@@ -337,7 +337,7 @@
                  <tr>
                   <th style="width: 10px">#</th>
                   <th>Imagen</th>
-                  <th>Código</th>
+                  <th>Codigo</th>
                   <th>Descripcion</th>
                   <th>Stock</th>
                   <th>Acciones</th>
@@ -434,7 +434,7 @@ MODAL AGREGAR CLIENTE
 
             </div>
 
-            <!-- ENTRADA PARA EL TELÉFONO -->
+            <!-- ENTRADA PARA EL TELEFONO -->
             
             <div class="form-group">
               
@@ -442,13 +442,13 @@ MODAL AGREGAR CLIENTE
               
                 <span class="input-group-addon"><i class="fa fa-phone"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar teléfono" data-inputmask="'mask':'(999) 999-9999'" data-mask required>
+                <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar telefono" data-inputmask="'mask':'(999) 999-9999'" data-mask required>
 
               </div>
 
             </div>
 
-            <!-- ENTRADA PARA LA DIRECCIÓN -->
+            <!-- ENTRADA PARA LA DIRECCION -->
             
             <div class="form-group">
               
@@ -456,7 +456,7 @@ MODAL AGREGAR CLIENTE
               
                 <span class="input-group-addon"><i class="fa fa-map-marker"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevaDireccion" placeholder="Ingresar dirección" required>
+                <input type="text" class="form-control input-lg" name="nuevaDireccion" placeholder="Ingresar direccion" required>
 
               </div>
 
